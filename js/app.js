@@ -37,6 +37,10 @@
 
   LightboxViewer.prototype.viewImage = function(imageIndex) {
     // TODO (Vannaro): Add data sanity checking :)
+    var background;
+    var image;
+    var imageWrapper;
+    var title;
 
     var imageData = this.images[imageIndex];
     
@@ -45,10 +49,6 @@
 
     // Handle showing or advancing the photos
     if (this.state === 'off') {
-      var background;
-      var image;
-      var imageWrapper;
-
       this.open();
 
       background = document.getElementById(this.domId);
@@ -63,9 +63,6 @@
       imageWrapper.appendChild(image);
       background.appendChild(imageWrapper);
     } else {
-      var image;
-      var title;
-
       image = document.getElementById('lb-image');
       image.setAttribute("src", imageData.link);
 
@@ -159,13 +156,16 @@
   };
 
   LightboxViewer.prototype.close = function() {
+    var background;
+    var parent;
+
     // Reset internal state
     this.state = 'off';
     this.currentImageIndex = undefined;
 
     // Remove the background element
-    var parent = document.getElementById("app");
-    var background = document.getElementById(this.domId);
+    parent = document.getElementById("app");
+    background = document.getElementById(this.domId);
     parent.removeChild(background);
 
     // Remove all DOM event handlers
@@ -241,7 +241,7 @@
       key: APP_CREDENTIALS.GOOG.KEY,
       cx: APP_CREDENTIALS.GOOG.CX,
       searchType: 'image',
-      q: 'puns', // because they're good
+      q: 'puns', // we care about quality content
       imgSize: 'large'
     };
 
