@@ -1,0 +1,145 @@
+/* Global */
+html, body {
+  height: 100%;
+  font-family: sans-serif;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  background-color: #EDEDED;
+}
+
+h1, h2, h3 {
+  font-weight: 100;
+}
+
+h1 {
+  font-size: 36px;
+  margin: 0;
+  padding: 20px 0;
+}
+
+h2 {
+  margin: 0;
+}
+
+/* Main App */
+.container {
+  margin: 0 auto;
+  min-height: 100%;
+  background-color: #CECECE;
+}
+
+
+/* Lightbox Viewer */
+#lb-background {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  bottom: 0;
+  right: 0;
+  overflow: auto;
+  background-color: rgba(50, 50, 50, .96);
+  /* don't allow for any selection */
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+#lb-btnContainer {
+  border-bottom: 2px solid #676767;
+  border-top: 2px solid #676767;
+  position: relative;
+  margin: 30px auto 0px auto;
+  min-height: 40px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  width: 250px;
+}
+
+#lb-btn--next, 
+#lb-btn--prev {
+  display: inline-block;
+  position: absolute;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+#lb-btn--prev {
+  height: 0;
+  padding-left: 50px;
+  border-top: 20px solid transparent;
+  border-right: 40px solid #CECECE;
+  border-bottom: 20px solid transparent;
+}
+
+#lb-btn--next {
+  right: 0;
+  height: 0;
+  padding-right: 50px;
+  border-top: 20px solid transparent;
+  border-left: 40px solid #CECECE;
+  border-bottom: 20px solid transparent;
+}
+
+#lb-image {
+  display: block;
+  margin: 50px auto 0 auto;
+  border-radius: 3px 3px 3px 3px;
+  -moz-border-radius: 3px 3px 3px 3px;
+  -webkit-border-radius: 3px 3px 3px 3px;
+  border: 4px solid rgba(78, 78, 78, 0.62);;
+}
+
+#lb-imageTitle {
+  padding-top: 50px;
+  color: white;
+}
+
+
+/* Image List Item */
+.img-container {
+  margin: 0 auto;
+  display: inline-block;
+  height: 300px;
+  max-width: 300px;
+  margin: 20px;
+  background-color: #CECECE;
+  cursor: pointer;
+}
+
+.img-inlineHelper {
+  display: inline-block;
+  vertical-align: middle;
+  height: 100%;
+}
+
+.img-element {
+  vertical-align: middle;
+  max-height: 250px;
+  max-width: 250px;
+  background: #3A6F9A;
+  border-radius: 10px 10px 10px 10px;
+  -moz-border-radius: 10px 10px 10px 10px;
+  -webkit-border-radius: 10px 10px 10px 10px;
+  border: 0px solid #000000;
+  
+  transition: -webkit-box-shadow 0.15s ease;
+  transition: -moz-box-shadow 0.15s ease;
+  transition: box-shadow 0.15s ease;
+}
+.img-element:hover {
+  -webkit-box-shadow: 0px 0px 20px 2px rgba(0,0,0,0.29);
+  -moz-box-shadow: 0px 0px 20px 2px rgba(0,0,0,0.29);
+  box-shadow: 0px 0px 20px 2px rgba(0,0,0,0.29);
+}
+
+
+/* Utils */
+.u--textCenter {
+  text-align: center;
+}
