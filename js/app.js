@@ -265,7 +265,7 @@
   // App initialization
   // 
   function initApp() {
-    new ImageHandler();
+    // new ImageHandler();
   }
   initApp();
 
